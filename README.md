@@ -8,7 +8,7 @@ get [directions](https://developers.google.com/maps/documentation/javascript/dir
 calculate [distance](https://developers.google.com/maps/documentation/distance-matrix) 
 and travel time based on transport mode
 
-Usage
+**Usage**
 1. Enter a From and To address
 2. Select a transport mode
 3. Click Search
