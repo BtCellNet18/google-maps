@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Google Maps</title>
+</head>
+
+<body>
+	<noscript>Enable JavaScript in your browser</noscript>
+
+	<div id="right-panel">
+		<div id="inputs">
+			<input id="txtFrom" type="text" placeholder="From" autocomplete="off">	
+			<input id="txtTo" type="text" placeholder="To" autocomplete="off">  
+			<select name="ddlModes" id="ddlModes" onchange="onModeSelected()">
+				<option value="DRIVING">Driving</option>
+				<option value="TRANSIT">Transit</option>
+				<option value="WALKING">Walking</option>
+				<option value="BICYCLING">Cycling</option>
+			</select>
+			<select name="ddlTransitModes" id="ddlTransitModes">
+				<option value="BUS">Bus</option>
+				<option value="SUBWAY">Subway</option>
+				<option value="TRAIN">Train</option>
+				<option value="TRAM">Tram</option>
+				<option value="RAIL">Rail</option>
+			</select>
+			<select name="ddlRoutingPreference" id="ddlRoutingPreference">
+				<option value="LESS_WALKING">Less Walking</option>
+				<option value="FEWER_TRANSFERS">Fewer Transfers</option>
+			</select>
+			<button id="btnSearch" onclick="onSearch()">Search</button>
+		</div>
+		<div>
+			<strong>Distance Matrix</strong>
+		</div>
+		<div id="output"></div>
+		<div id="directions"></div>
+	</div>
+	<div id="map"></div>
+	<div id="loader"></div>
+
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap"></script>
+	<script src="js/index.js"></script>
+</body>
+
+</html>
